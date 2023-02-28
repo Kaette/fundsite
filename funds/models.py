@@ -1,7 +1,4 @@
 from django.db import models
-# from fundsite.models import Fun
-
-# Create your models here.
 
 class Fund(models.Model):
     name = models.CharField(max_length=50)

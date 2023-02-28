@@ -1,0 +1,18 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+
+<h1>Welcome</h1>
+<h2>What would you like to do?</h2>
+<a href="new-fund/">Register Fund</a>
+<br>
+<br>
+<a href="new-investor">Register Investor</a>
+<br>
+<br>
+<h2>Funds registered:</h2>
+<ul>
+    {% for name in funds %}
+        <a href="{{name}}/">{{name}}</a>
+    {% endfor %}
+</ul>
