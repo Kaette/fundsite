@@ -1,6 +1,8 @@
 from django.forms import ModelForm
 from .models import Fund, Investor
 
+# Forms extended from the models specified in models.py
+
 class FundForm(ModelForm):
    class Meta:
         model = Fund
@@ -9,4 +11,4 @@ class FundForm(ModelForm):
 class InvestorForm(ModelForm):
     class Meta:
         model = Investor
-        exclude = ['creation_date']
+        fields = '__all__'

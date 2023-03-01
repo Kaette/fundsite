@@ -1,5 +1,8 @@
 from django.db import models
 
+# Specifies two models Fund and Investor which make the data used in the app.
+# Extends to forms in forms.py
+
 class Fund(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=100)
