@@ -1,10 +1,15 @@
-<head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-</head>
+{% extends 'funds/base.html' %}
 
+{% block title %}Register{% endblock title %}
+
+{% block heading %}
 <h1>Register:</h1>
+{% endblock heading %}
+
+{% block body %}
 <form action="" method="post">
     {% csrf_token %}
     {{form}}
     <input type="submit" value="Submit">
 </form>
+{% endblock body %}

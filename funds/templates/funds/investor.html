@@ -1,13 +1,17 @@
-<head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-</head>
+{% extends 'funds/base.html' %}
 
+{% block title %}{{investor.first_name}} {{investor.last_name}}{% endblock title %}
+
+{% block heading %}
 <h1>{{investor.first_name}} {{investor.last_name}}</h1>
-<p>Registered at: <a href="/funds/{{fund.id}}/">{{fund.name}}</a></p>
+{% endblock heading %}
+
+{% block links %}
+<p>Registered at: <a href="/funds/{{fund_id}}/">{{fund.fund}}</a></p>
 <p>Joined: {{investor.creation_date}}</p>
+{% endblock links %}
 
-<hr>
-
+{% block body %}
 <p>I used to work at an abortion clinic and I saw some extremely fucked up shit there which is why I'm so anti-abortion now. This is just SOME of the horrible stuff I personally witnessed:</p>
 <ul>
     <p>A 23 year old woman came in 11 months into her pregnancy and said "I don't want my stupid baby anymore, kill it" and the doctor said "okay" and he put jumper cables up her baby hole and connected them to a car battery and let it run for six days straight</p>
@@ -20,3 +24,4 @@
     <p>The doctors put all sorts of crap up a woman's uterus including a clown nose, bicycle handlebars, a calendar, and an entire Sears retail outlet (before bankruptcy)</p>
     <p>During every successful abortion, the doctor would shout "take that, baby" and he'd push a red button that made sirens go off and confetti fell from the ceiling and we'd all get Del Taco for free</p>
 </ul>
+{% endblock body %}
