@@ -23,7 +23,7 @@ Investor objekter linker til Fund objekter many-to-one.
 ## Style
 Siden benytter stylesheetet <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">.
 
-Kunne godt være pænere, men hvad kan man gøre  ¯\_(ツ)_/¯
+Kunne godt være pænere, men hvad kan man gøre  ¯\\\_(ツ)\_/¯
 
 ## Mulige forbedringer
  - Siden nulstiller ikke forms, så hvis man refresher med formed udfyldt bliver objektet oprettet i databasen.
