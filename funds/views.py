@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
 
 from .forms import FundForm, InvestorForm
 from .models import Fund, Investor
@@ -34,10 +35,10 @@ def newInvestor(request):
 
 # Fetches the fund which primary key matches the number in the url.
 def fund(request, fund_id):
-    name = get_object_or_404(Fund, pk=fund_id)
+    fund = get_object_or_404(Fund, pk=fund_id)
     # Lists investors belonging to the given fund.
-    members = Investor.objects.filter(fund=name)
-    return render(request, 'funds/fund.html', {'members': members, 'name': name})
+    members = Investor.objects.filter(fund=fund)
+    return render(request, 'funds/fund.html', {'members': members, 'fund': fund})
 
 # Generates page for investor same as fund. Takes both investor_id and fund_id as it is a subsite.
 def investor(request, investor_id, fund_id):

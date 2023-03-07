@@ -1,18 +1,21 @@
-<head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-</head>
+{% extends 'funds/base.html' %}
 
-<h1>{{name}}</h1>
-<h2>Registered members:</h2>
-<br>
+{% block title %}{{name}}{% endblock title %}
+
+{% block heading %}
+<h1>{{fund}}</h1>
+{% endblock heading %}
+
+{% block links %}
 <ul>
-    {% for first_name in members %}
-        <a href="{{first_name.id}}/">{{first_name}} {{last_name}}</a>
+    {% for investor in members %}
+        <a href="{% url 'fund_investor' fund.id investor.id %}">{{investor}}</a>
+        <br>
     {% endfor %}
 </ul>
+{% endblock links %}
 
-<hr>
-
+{% block body %}
 <p>Today when I walked into my economics class I saw something I dread every time I close my eyes. 
     Someone had brought their new gaming laptop to class. 
     The Forklift he used to bring it was still running idle at the back. 
@@ -29,3 +32,4 @@
     my body is getting torn apart by the 150mph gale force winds and the 500 decibel groan of the cooling fans. 
     As my body finally surrenders, I weep, as my school and my city go under. 
     I fucking hate gaming laptops.</p>
+{% endblock body %}

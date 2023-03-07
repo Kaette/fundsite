@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <title>{% block title %}Fundsite{% endblock title %}</title>
+</head>
+
+<body>
+    <div id="Heading">
+        {% block heading %}
+        {% endblock heading %}
+    </div>
+    <div id="links">
+        {% block links %}
+        <hr>
+        {% endblock links %}
+    </div>
+    <hr>
+    <div id="body">
+        {% block body %}
+        {% endblock body %}
+    </div>
+</body>
